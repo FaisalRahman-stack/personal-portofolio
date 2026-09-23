@@ -24,6 +24,7 @@ function NavLinks({ location, mobile = false }) {
             key={item.href}
             className={`rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ${activeClass}`}
             href={item.href}
+            aria-current={isActive ? 'page' : undefined}
           >
             {item.label}
           </Link>

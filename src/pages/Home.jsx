@@ -56,7 +56,7 @@ function Home() {
           </aside>
         </section>
 
-        <section id="projects" className="border-y bg-surface">
+        <section id="projects" className="scroll-mt-24 border-y bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
             <SectionHeading
               eyebrow="PROYEK UNGGULAN"
