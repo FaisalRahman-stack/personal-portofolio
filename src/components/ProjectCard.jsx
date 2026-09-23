@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
 import SkillBadge from './SkillBadge'
 
-function ProjectCard({ data }) {
-  const { title, shortDescription, techStack, githubUrl, demoUrl, imageUrl } = data
+function ProjectCard({ data, showFullDescription = false }) {
+  const { title, shortDescription, fullDescription, techStack, githubUrl, demoUrl, imageUrl } = data
+  const description = showFullDescription ? fullDescription : shortDescription
 
   return (
     <article className="overflow-hidden rounded-xl border bg-surface transition-colors duration-200 hover:border-accent">
@@ -16,7 +17,7 @@ function ProjectCard({ data }) {
 
       <div className="p-6">
         <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="mt-3 leading-7 text-text-secondary">{shortDescription}</p>
+        <p className="mt-3 leading-7 text-text-secondary">{description}</p>
 
         <div className="mt-5 flex flex-wrap gap-2">
           {techStack.map((technology) => (
@@ -53,11 +54,17 @@ ProjectCard.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
     shortDescription: PropTypes.string.isRequired,
+    fullDescription: PropTypes.string.isRequired,
     techStack: PropTypes.arrayOf(PropTypes.string).isRequired,
     githubUrl: PropTypes.string.isRequired,
     demoUrl: PropTypes.string,
     imageUrl: PropTypes.string,
   }).isRequired,
+  showFullDescription: PropTypes.bool,
+}
+
+ProjectCard.defaultProps = {
+  showFullDescription: false,
 }
 
 export default ProjectCard
