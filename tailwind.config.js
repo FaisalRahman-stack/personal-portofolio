@@ -17,6 +17,26 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
+      keyframes: {
+        'pulse-glow': {
+          '0%, 100%': {
+            opacity: '0.9',
+            boxShadow: '0 0 0 rgba(34, 211, 238, 0)',
+          },
+          '50%': {
+            opacity: '1',
+            boxShadow: '0 0 15px rgba(34, 211, 238, 0.4)',
+          },
+        },
+        'float-slow': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-4px)' },
+        },
+      },
+      animation: {
+        'pulse-glow': 'pulse-glow 3.5s ease-in-out infinite',
+        'float-slow': 'float-slow 4s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

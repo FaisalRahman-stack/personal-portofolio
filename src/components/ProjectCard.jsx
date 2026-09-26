@@ -6,7 +6,7 @@ function ProjectCard({ data, showFullDescription = false }) {
   const description = showFullDescription ? fullDescription : shortDescription
 
   return (
-    <article className="overflow-hidden rounded-xl border bg-surface transition-colors duration-200 hover:border-accent">
+    <article className="overflow-hidden rounded-xl border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 motion-reduce:transform-none motion-reduce:transition-none">
       {imageUrl ? (
         <img className="h-48 w-full object-cover" src={imageUrl} alt={`Tampilan ${title}`} />
       ) : (
