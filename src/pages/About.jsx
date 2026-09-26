@@ -1,5 +1,6 @@
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import ProfilePhoto from '../components/ProfilePhoto'
 import SectionHeading from '../components/SectionHeading'
 import SkillBadge from '../components/SkillBadge'
 import { organizations, profile, skills } from '../data/portfolioData'
@@ -17,22 +18,26 @@ function About() {
             description={profile.summary}
           />
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem]">
-            <article className="rounded-xl border bg-surface p-6">
-              <p className="font-mono text-sm text-accent">PENDIDIKAN</p>
-              <h3 className="mt-4 text-lg font-semibold">{profile.education.degree}</h3>
-              <p className="mt-2 text-text-secondary">{profile.education.institution}</p>
-              <div className="mt-6 border-t pt-5">
-                <p className="text-sm text-text-secondary">IPK</p>
-                <p className="mt-1 font-mono text-xl font-medium">{profile.education.gpa}</p>
-              </div>
-            </article>
+          <div className="mt-10 grid items-center gap-10 lg:grid-cols-[18rem_minmax(0,1fr)]">
+            <ProfilePhoto />
 
-            <article className="rounded-xl border bg-surface p-6">
-              <p className="font-mono text-sm text-accent">ARAH KARIER</p>
-              <p className="mt-4 text-lg font-semibold">{profile.role}</p>
-              <p className="mt-3 leading-7 text-text-secondary">{profile.tagline}</p>
-            </article>
+            <div className="grid gap-6 sm:grid-cols-2">
+              <article className="rounded-xl border bg-surface p-6">
+                <p className="font-mono text-sm text-accent">PENDIDIKAN</p>
+                <h3 className="mt-4 text-lg font-semibold">{profile.education.degree}</h3>
+                <p className="mt-2 text-text-secondary">{profile.education.institution}</p>
+                <div className="mt-6 border-t pt-5">
+                  <p className="text-sm text-text-secondary">IPK</p>
+                  <p className="mt-1 font-mono text-xl font-medium">{profile.education.gpa}</p>
+                </div>
+              </article>
+
+              <article className="rounded-xl border bg-surface p-6">
+                <p className="font-mono text-sm text-accent">ARAH KARIER</p>
+                <p className="mt-4 text-lg font-semibold">{profile.role}</p>
+                <p className="mt-3 leading-7 text-text-secondary">{profile.tagline}</p>
+              </article>
+            </div>
           </div>
         </section>
 

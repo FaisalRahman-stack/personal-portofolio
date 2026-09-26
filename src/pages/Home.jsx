@@ -1,5 +1,6 @@
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import ProfilePhoto from '../components/ProfilePhoto'
 import ProjectCard from '../components/ProjectCard'
 import SectionHeading from '../components/SectionHeading'
 import SkillBadge from '../components/SkillBadge'
@@ -13,47 +14,40 @@ function Home() {
       <Navbar />
 
       <main className="flex-1">
-        <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 sm:py-24 lg:grid-cols-[1fr_20rem] lg:items-center">
-          <div>
-            <p className="font-mono text-sm text-accent">HALO, SAYA</p>
-            <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
-              {profile.name}
-            </h1>
-            <p className="mt-4 text-xl font-medium text-text-primary sm:text-2xl">{profile.role}</p>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-text-secondary">
-              {profile.tagline}
-            </p>
-            <p className="mt-4 max-w-2xl leading-7 text-text-secondary">{profile.summary}</p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                className="rounded-lg bg-accent px-5 py-2.5 font-medium text-background transition-colors duration-200 hover:bg-cyan-300"
-                href="#projects"
-              >
-                Lihat proyek
-              </a>
-              <a
-                className="rounded-lg border px-5 py-2.5 font-medium text-text-primary transition-colors duration-200 hover:bg-surface-hover"
-                href={profile.contact.github}
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
-
-          <aside className="rounded-xl border bg-surface p-6">
-            <p className="font-mono text-sm text-accent">PENDIDIKAN</p>
-            <p className="mt-4 text-lg font-semibold">{profile.education.degree}</p>
-            <p className="mt-2 leading-7 text-text-secondary">{profile.education.institution}</p>
-            <div className="mt-6 border-t pt-5">
-              <p className="text-sm text-text-secondary">IPK</p>
-              <p className="mt-1 font-mono text-xl font-medium text-text-primary">
-                {profile.education.gpa}
+        <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+          <div className="flex flex-col-reverse gap-12 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-3xl">
+              <p className="font-mono text-sm text-cyan-400 md:text-base">👋 Halo, saya</p>
+              <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-100 md:text-5xl">
+                {profile.name}
+              </h1>
+              <p className="mt-4 text-xl font-medium text-text-primary sm:text-2xl">
+                {profile.role}
               </p>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-text-secondary">
+                {profile.tagline}
+              </p>
+              <p className="mt-4 max-w-2xl leading-7 text-text-secondary">{profile.summary}</p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  className="rounded-lg bg-accent px-5 py-2.5 font-medium text-background transition-colors duration-200 hover:bg-cyan-300"
+                  href="#projects"
+                >
+                  Lihat proyek
+                </a>
+                <a
+                  className="rounded-lg border px-5 py-2.5 font-medium text-text-primary transition-colors duration-200 hover:bg-surface-hover"
+                  href={profile.contact.github}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
-          </aside>
+            <ProfilePhoto />
+          </div>
         </section>
 
         <section id="projects" className="scroll-mt-24 border-y bg-surface">
