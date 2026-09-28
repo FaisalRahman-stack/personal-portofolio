@@ -51,7 +51,10 @@ function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
         <Link className="flex items-center gap-3" href="/" aria-label="Kembali ke halaman utama Faisal Rahman">
           <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-700 bg-slate-950 font-mono text-xs font-medium text-cyan-400">
-            &lt;FR /&gt;
+            <img 
+              src="/pp.png" 
+              alt="Faisal Rahman" 
+              className="h-full w-full object-cover object-top"/>
           </span>
           <span className="text-sm font-semibold text-slate-100">Faisal Rahman</span>
           <span className="hidden items-center gap-1.5 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2 py-1 text-xs font-medium text-emerald-300 md:flex">

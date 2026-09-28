@@ -1,6 +1,3 @@
-// Single source of truth untuk seluruh konten portofolio.
-// Tambahkan atau ubah data di sini tanpa perlu mengubah komponen tampilan.
-
 export const profile = {
   name: 'Muhammad Faisal Rahman',
   role: 'Junior Fullstack / Web Developer',
@@ -13,8 +10,7 @@ export const profile = {
   summary:
     'Fokus pada pengembangan web fullstack dengan pengalaman desain API, integritas database relasional, dan analisis sistem berbasis SDLC.',
   contact: {
-    // Ganti sebelum deploy agar CTA email mengarah ke alamat yang benar.
-    email: 'isi-email-kamu@example.com',
+    email: 'muhammadfaisalrahman488@gmail.com',
     github: 'https://github.com/FaisalRahman-stack',
     linkedin: 'https://linkedin.com/in/faisal-rahman-8a8650320',
   },
@@ -38,8 +34,13 @@ export const projects = [
       'Sistem pelacakan logistik dengan desain RESTful API untuk manajemen armada dan rute pengiriman, menjaga integritas database MySQL, serta antarmuka responsif untuk tracking resi real-time.',
     techStack: ['React', 'Node.js', 'MySQL', 'REST API'],
     githubUrl: 'https://github.com/FaisalRahman-stack/logistic-tracker',
-    demoUrl: null,
-    imageUrl: null,
+    demoUrl: 'https://logistic-tracker-crud.vercel.app/',
+    images: ['/projects/tracker/login.png',
+              '/projects/tracker/dashboard.png',
+              '/projects/tracker/Asset1.png',
+              '/projects/tracker/Asset2.png',
+              '/projects/tracker/event.png',
+            ],
     featured: true,
   },
   {
@@ -51,8 +52,15 @@ export const projects = [
       'Sistem informasi rental kendaraan dengan Role-Based Access Control (Admin vs User), dashboard full CRUD, fitur upload visual mobil dinamis, dan basis data MySQL relasional.',
     techStack: ['React', 'MySQL', 'RBAC', 'REST API'],
     githubUrl: 'https://github.com/FaisalRahman-stack/rental-kendaraan',
-    demoUrl: null,
-    imageUrl: null,
+    demoUrl: 'https://uas-pemrograman-web-lanjut.vercel.app/',
+    images: ['/projects/rental/login1.png',
+              '/projects/rental/daftar.png',
+              '/projects/rental/katalog.png',
+              '/projects/rental/sewa.png',
+              '/projects/rental/dashboard-admin.png',
+              '/projects/rental/kelola_mobil.png',
+              '/projects/rental/transaksi.png',
+                                                ],
     featured: true,
   },
 ]

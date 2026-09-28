@@ -9,7 +9,9 @@ function Contact() {
   const externalLinks = [
     { label: 'GitHub', href: github, description: 'Lihat kode dan riwayat proyek saya.' },
     { label: 'LinkedIn', href: linkedin, description: 'Terhubung secara profesional.' },
+    { label: 'Email', href: `mailto:${email}`, description: 'Kirim email langsung ke saya.' },
   ]
+  
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -25,23 +27,16 @@ function Contact() {
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             <article className="rounded-xl border bg-surface p-6 lg:col-span-3">
-              <p className="font-mono text-sm text-accent">EMAIL</p>
-              {emailIsPlaceholder ? (
-                <div className="mt-4">
-                  <p className="text-lg font-semibold">Email belum dipublikasikan</p>
-                  <p className="mt-2 leading-7 text-text-secondary">
-                    Ganti nilai <code className="font-mono text-accent">profile.contact.email</code>{' '}
-                    di portfolioData.js sebelum deploy agar CTA email aktif.
-                  </p>
-                </div>
-              ) : (
+              <p className="font-mono text-sm text-accent">Curriculum Vitae</p>
+              <p className="mt-4 text-lg font-semibold">Tertarik meninjau kualifikasi lengkap saya?</p> 
+              <p className="mt-2 leading-7 text-text-secondary">Unduh resume PDF singkat untuk seleksi magang.</p>
                 <a
-                  className="mt-4 inline-block text-lg font-semibold text-accent transition-colors duration-200 hover:text-cyan-300"
-                  href={`mailto:${email}`}
-                >
-                  {email}
-                </a>
-              )}
+                  href="/cv.pdf"
+                  download="CV Muhammad Faisal Rahman.pdf"
+                  className="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 font-semibold text-slate-950 transition hover:opacity-90 whitespace-nowrap self-start md:self-auto">
+                  <span>Unduh CV (PDF)</span>
+                  <span>↓</span>
+                </a>  
             </article>
 
             {externalLinks.map((link) => (

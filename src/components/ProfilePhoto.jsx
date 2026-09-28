@@ -17,7 +17,7 @@ function ProfilePhoto() {
       ) : (
         <img
           className="aspect-square w-full rounded-2xl border-2 border-slate-800 object-cover shadow-2xl shadow-cyan-400/10 transition-colors duration-200 group-hover:border-cyan-400"
-          src="/profile.jpg"
+          src="/pp.png"
           alt="Muhammad Faisal Rahman"
           onError={() => setHasImageError(true)}
         />

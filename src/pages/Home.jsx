@@ -17,14 +17,14 @@ function Home() {
         <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
           <div className="flex flex-col-reverse gap-12 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-3xl">
-              <p className="font-mono text-sm text-cyan-400 md:text-base">👋 Halo, saya</p>
+              <p className="font-mono text-sm text-cyan-400 md:text-2xl">Halo, saya</p>
               <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-100 md:text-5xl">
                 {profile.name}
               </h1>
               <p className="mt-4 text-xl font-medium text-text-primary sm:text-2xl">
                 {profile.role}
               </p>
-              <p className="mt-5 max-w-2xl text-lg leading-8 text-text-secondary">
+              <p className="mt-5 max-w-2xl font-medium text-lg leading-8 text-text-primary sm:text-xl">
                 {profile.tagline}
               </p>
               <p className="mt-4 max-w-2xl leading-7 text-text-secondary">{profile.summary}</p>
