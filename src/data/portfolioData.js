@@ -33,8 +33,8 @@ export const projects = [
     fullDescription:
       'Sistem pelacakan logistik dengan desain RESTful API untuk manajemen armada dan rute pengiriman, menjaga integritas database MySQL, serta antarmuka responsif untuk tracking resi real-time.',
     techStack: ['React', 'Node.js', 'MySQL', 'REST API'],
-    githubUrl: 'https://gear-tracker-crud-phi.vercel.app/',
-    demoUrl: 'https://logistic-tracker-crud.vercel.app/',
+    githubUrl: 'https://github.com/FaisalRahman-stack/gear-tracker-crud',
+    demoUrl: 'https://gear-tracker-crud-phi.vercel.app/',
     images: ['/projects/tracker/login.png',
               '/projects/tracker/dashboard.png',
               '/projects/tracker/Asset1.png',
